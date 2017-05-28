@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Singleton {
     private static Singleton instance;
-    private ArrayList<String> array = null;
+    private ArrayList<String> array;
 
     private Singleton() {}
 
@@ -26,9 +26,9 @@ public class Singleton {
                     array.add("Pass");
                 }
             }
-            for (int i = 0; i < array.size(); i++) {
+            /*for (int i = 0; i < array.size(); i++) {
                 System.out.println(array.get(i));
-            }
+            }*/
         }
     }
 
@@ -40,5 +40,9 @@ public class Singleton {
 
     public void change(int index, String value){
         array.set(index, value);
+    }
+
+    public String getValue(int index){
+        return array.get(index);
     }
 }

@@ -3,7 +3,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertTrue;
 
-
 public class TestChangeClass {
     Singleton X;
 
@@ -27,6 +26,6 @@ public class TestChangeClass {
     @Test(dataProvider = "arraych")
     public void TestChangeMethod(int firstPar, String secondPar){
         X.change(firstPar, secondPar);
-        assertTrue(X.get().equals("test"));
+        assertTrue(X.getValue(firstPar).equals("test"));
     }
 }
