@@ -1,5 +1,4 @@
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import static org.testng.Assert.assertTrue;
 
 @Test
@@ -12,8 +11,8 @@ public class TestGetClass {
        X.populate();
     }
 
-    public void TestGetMethod(){
+    public void testGetMethod(){
         String str = X.get();
-        assertTrue(str.substring(1).equals("ass"), "Строка " + str + " не содержит ass");
+        assertTrue(str.substring(1).equals("ass"), "Строка " + str + " не содержит подстроку 'ass'");
     }
 }

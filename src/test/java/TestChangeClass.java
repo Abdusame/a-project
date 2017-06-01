@@ -24,7 +24,7 @@ public class TestChangeClass {
     }
 
     @Test(dataProvider = "arraych")
-    public void TestChangeMethod(int firstPar, String secondPar){
+    public void testChangeMethod(int firstPar, String secondPar){
         X.change(firstPar, secondPar);
         assertTrue(X.getValue(firstPar).equals("test"));
     }
